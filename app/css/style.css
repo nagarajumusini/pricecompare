@@ -1,0 +1,28 @@
+.center-table
+{
+  margin: 0 auto !important;
+  float: none !important;
+  font-size: 12px;
+}
+.table-header-row{
+    background-color: #337ab7 !important;
+    color: #fff !important;
+    font-weight: normal;
+}
+.yes-message{
+    color: #fff;
+    background-color: rgba(0, 128, 0, 0.73);
+    width: 10%;
+}
+.no-message{
+	color: #fff;
+    background-color: rgba(255, 0, 0, 0.8);
+    width: 10%;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.row-space{
+	padding-top: 20px;
+}

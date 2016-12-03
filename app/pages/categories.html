@@ -1,0 +1,83 @@
+
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">System Administration > Reset Filters
+                 <!--   <small>Item Subheading</small> -->
+                </h4>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+            <div class="col-lg-8">
+                  <p>Select File Type to See Associated Filters:
+                  <!-- <select>
+                      <option>BirthInfantDeath</option>
+                      <option>FetalDeath</option>
+                      <option>ITOP</option>
+                      <option>Mortality</option>
+                      <option>NewNatality</option>
+                      <option>Roster</option>
+                  </select> -->
+                <!--  <div ng-repeat="(key, value) in data">
+                  {{key}}
+                  </div> -->
+                  <select ng-model='selectedItem' ng-change="loadFilter(selectedItem)">
+                    <option ng-repeat="(key, value) in data" value="{{key}}">{{key}}</option>
+                </select>
+                  </p>
+            </div>
+            <div class="col-lg-4">
+                <button>Import/Export</button>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row row-space">
+            <div class="col col-lg-10 col-centered">
+             <div class="panel panel-default">
+              <div class="panel-heading">Filters for BirthInfanDeath</div>
+              <div class="panel-body">
+                <h5>Mandatory Filters</h5>
+                <table class="table table-hover center-table">
+                    <thead>
+                        <tr class="table-header-row"><td>Recipient</td> <td>Configured?</td></tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr ng-repeat="item in filterData.mandatoryFilter"><td >{{item.recipient}}</td> <td class="yes-message">{{item.configured}}</td> </tr> 
+                    </tbody> 
+                </table>
+
+                <h5>Optional Program Filters</h5>
+                <table class="table table-hover center-table">
+                    <thead>
+                        <tr class="table-header-row"><td>Recipient</td><td>Internal/IDE</td> <td>Configured?</td></tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr ng-repeat="item in filterData.optionalFilters"><td width="70%">{{item.recipient}}</td> <td width="20%">{{item.internalIJE}}</td><td ng-class="{'no-message': item.configured == 'No', 'yes-message': item.configured == 'Yes'}">{{item.configured}}</td> </tr> <!--
+                        <tr><td width="70%">Approved Research</td> <td width="20%">Internal</td><td class="no-message">No</td> </tr> 
+                        <tr><td width="70%">Child Health Registry</td> <td width="20%">IJE</td><td class="no-message">No</td> </tr> 
+                        <tr><td width="70%">Child Health Registry</td> <td width="20%">Internal</td><td class="no-message">No</td> </tr> 
+                        <tr><td width="70%">Infant/Child Death Review</td> <td width="20%">IJE</td><td class="no-message">No</td> </tr> 
+                        <tr><td width="70%">Infant/Child Death Review</td> <td width="20%">Internal</td><td class="no-message">No</td> </tr> 
+                        <tr><td width="70%">National Violent Death Reporting System</td> <td width="20%">IJE</td><td class="no-message">No</td> </tr> 
+                        <tr><td width="60%">National Violent Death Reporting System</td> <td width="20%">Internal</td><td class="no-message">No</td> </tr>  -->
+                    </tbody> 
+                </table>
+
+              </div>
+            </div>
+                
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <p>Copyright &copy; Your Website 2014</p> -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
